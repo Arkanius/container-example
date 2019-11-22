@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  php:
+    image: vtrgomes/composer-alpine:7.3
+    user: app
+    expose:
+      - 9000
+    volumes:
+      - ./composer-cache:/composer/cache
+      - ./:/var/www/app
+    networks:
+      - app-network
+
+volumes:
+  composer-cache:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,12 @@
+{
+    "name": "root/app",
+    "require": {
+        "symfony/var-dumper": "^5.0"
+    },
+    "authors": [
+        {
+            "name": "Victor Gomes",
+            "email": "vtr.gomes@hotmail.com"
+        }
+    ]
+}

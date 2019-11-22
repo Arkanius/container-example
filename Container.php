@@ -20,9 +20,25 @@ class Foo
 
 class Bar
 {
+    private $tar;
+
+    public function __construct(Tar $tar)
+    {
+        $this->tar = $tar;
+    }
+
     public function methodBar()
     {
         echo 'ok Bar'. PHP_EOL;
+        $this->tar->methorTar();
+    }
+}
+
+class Tar 
+{
+    public function methorTar()
+    {
+        echo 'ok Tar'. PHP_EOL;
     }
 }
 
